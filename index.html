@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>BankIslami Digital Onboarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bank-styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="header-content">
+                <a href="#" class="logo" aria-label="BankIslami Home">
+                    <img src="assets/logo.png" alt="BankIslami Logo">
+                </a>
+                <div class="header-vertical-divider"></div>
+                <div class="header-text">Welcome to BankIslami Digital Onboarding</div>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="progress-indicator">
+            <div class="progress-step completed" data-step="1">
+                <div class="step-connector completed"></div>
+                <div class="step-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="step-label">Basic Details & OTP Information</div>
+            </div>
+            <div class="progress-step completed" data-step="2">
+                <div class="step-connector completed"></div>
+                <div class="step-circle completed">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="step-label">Individual Information</div>
+            </div>
+            <div class="progress-step active" data-step="3">
+                <div class="step-connector active"></div>
+                <div class="step-circle active">
+                    <img src="assets/Check.png" alt="" class="step-icon">
+                </div>
+                <div class="step-label">Bank Account Details</div>
+            </div>
+            <div class="progress-step pending" data-step="4">
+                <div class="step-connector pending"></div>
+                <div class="step-circle pending">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="step-label">Value Added Services</div>
+            </div>
+            <div class="progress-step pending" data-step="5">
+                <div class="step-connector pending"></div>
+                <div class="step-circle pending">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <div class="step-label">Zakat & FACTA Status</div>
+            </div>
+            <div class="progress-step pending" data-step="6">
+                <div class="step-connector pending"></div>
+                <div class="step-circle pending">
+                    <img src="assets/Shield_Check.png" alt="" class="step-icon">
+                </div>
+                <div class="step-label">Verification</div>
+            </div>
+        </div>
+        <!-- Mobile: single-line step indicator (e.g. "3/6: Bank Account Details") -->
+        <div class="header-mobile-step" id="headerMobileStep" aria-hidden="true">
+            <span class="header-mobile-step-text" id="mobileStepText">3/6: Bank Account Details</span>
+            <span class="header-mobile-step-line" aria-hidden="true"></span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Account Type Selection - banking_bkg.png has full background (gradient + icon) -->
+        <section class="form-section hero-section">
+            <div class="hero-banner">
+                <h2 class="hero-title">
+                    <span class="lang-en">Select your<br> preferred account type</span>
+                    <span class="lang-ur" style="margin-top: -0.5rem; display: block;">اپنی پسندیدہ اکاؤنٹ کی قسم منتخب
+                        کریں۔</span>
+                </h2>
+            </div>
+
+            <div class="account-types-wrapper">
+                <div class="account-types" style="margin-top: -2rem; ">
+                    <button class="account-type-btn selected" data-account="islami-asaan-digital-current">
+                        <span class="account-name">
+                            <span class="account-line-1">Islami Asaan Digital</span>
+                            <span class="account-line-2">Current Account</span>
+                        </span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-asaan-digital-savings">
+                        <span class="account-name">
+                            <span class="account-line-1">Islami Asaan Digital</span>
+                            <span class="account-line-2">Savings Account</span>
+                        </span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-asaan-digital-sahulat">
+                        <span class="account-name">
+                            <span class="account-line-1">Islami Asaan Digital</span>
+                            <span class="account-line-2">Sahulat Account</span>
+                        </span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-bachat">
+                        <span class="account-name">Islami Bachat Account</span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-sahulat">
+                        <span class="account-name">Islami Sahulat Account</span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-premium-saving">
+                        <span class="account-name">Islami Premium Saving Account</span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-current">
+                        <span class="account-name">Islami Current Account</span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <button class="account-type-btn" data-account="islami-asaan-digital-remittance">
+                        <span class="account-name">
+                            <span class="account-line-1">Islami Asaan Digital</span>
+                            <span class="account-line-2">Remittance Account</span>
+                        </span>
+                        <span class="checkmark">
+                            <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="account-types-last-row">
+                        <button class="account-type-btn" data-account="islami-asaan-digital-remittance-2">
+                            <span class="account-name">
+                                <span class="account-line-1">Islami Asaan Digital</span>
+                                <span class="account-line-2">Remittance Account</span>
+                            </span>
+                            <span class="checkmark">
+                                <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <button class="account-type-btn" data-account="islami-freelancer-digital">
+                            <span class="account-name">Islami Freelancer Digital Account</span>
+                            <span class="checkmark">
+                                <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                        <button class="account-type-btn" data-account="islami-mashal-asaan-remunerative">
+                            <span class="account-name">
+                                <span class="account-line-1">Islami Mashal Asaan</span>
+                                <span class="account-line-2">Remunerative Current Digital Account</span>
+                            </span>
+                            <span class="checkmark">
+                                <svg class="checkmark-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features + Go with selected account (as per screenshot) -->
+            <div class="hero-features-cta">
+                <div class="account-features" id="accountFeaturesBox">
+
+                    <div class="feature-item">
+                        <span class="checkmark">
+                            <img src="assets/check-2.png" alt="" class="feature-checkmark-icon" aria-hidden="true">
+                        </span>
+                        <span>Free - Cheque-Book would-be provided</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">
+                            <img src="assets/check-2.png" alt="" class="feature-checkmark-icon" aria-hidden="true">
+                        </span>
+                        <span>Free - Internet facility</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">
+                            <img src="assets/check-2.png" alt="" class="feature-checkmark-icon" aria-hidden="true">
+                        </span>
+                        <span>Free - SMS Alerts facility upon request.</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">
+                            <img src="assets/check-2.png" alt="" class="feature-checkmark-icon" aria-hidden="true">
+                        </span>
+                        <span>Free - Mobile Banking application facility</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="checkmark">
+                            <img src="assets/check-2.png" alt="" class="feature-checkmark-icon" aria-hidden="true">
+                        </span>
+                        <span>Free - E-Statement facility upon request</span>
+                    </div>
+                </div>
+                <div class="section-actions">
+                    <button type="button" class="hero-cta-btn" id="goWithSelectedAccountBtn">
+                        <span class="cta-line-1">Go with the selected</span>
+                        <span class="cta-line-2">account</span>
+                        <span class="cta-mobile-text" aria-hidden="true">Select account</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section city-select-section">
+            <h3 class="city-select-heading">
+                <span class="lang-en">Select City</span>
+                <span class="lang-ur">شہر منتخب کریں</span>
+            </h3>
+
+            <div class="city-tag-input-wrapper">
+                <!-- LEFT INPUT -->
+                <input type="text" class="city-tag-input" id="cityTagInput" placeholder="Select City" autocomplete="off">
+
+                <!-- 🔽 DROPDOWN UNDER THE INPUT (Theme Styled) -->
+                <div class="city-dropdown" id="cityDropdown"></div>
+            </div>
+        </section>
+
+
+
+        <!-- Select Branch (tag-style, same as Select City) -->
+        <section class="form-section city-select-section">
+            <h3 class="city-select-heading">
+                <span class="lang-en">Select Branch</span>
+                <span class="lang-ur">برانچ منتخب کریں</span>
+            </h3>
+
+
+            <div class="branch-tag-input-wrapper">
+                <!-- LEFT INPUT -->
+                <input type="text" class="branch-tag-input" id="branchTagInput" placeholder="Johar Chorangi|"
+                    autocomplete="off" aria-label="Search branch">
+
+                <!-- RIGHT TAG -->
+                <span class="branch-tag">
+                    <span class="city-tag-label" id="selectedBranchLabel">Johar Chorangi Branch</span>
+                    <button type="button" class="city-tag-action" aria-label="Remove or add branch">
+                        <img src="assets/plus.png" class="city-tag-action-icon" aria-hidden="true">
+                    </button>
+                </span>
+
+                <!-- DROPDOWN -->
+                <div class="city-dropdown" id="branchDropdown"></div>
+            </div>
+
+            <div class="branch-map-container">
+                <img src="assets/map.png" alt="Branch location map - Johar Chorangi area" class="branch-map-img"
+                    id="branchMapImg">
+            </div>
+
+
+
+
+            <!-- Monthly income (same heading + single input style as Select City) -->
+            <section class="form-section city-select-section">
+                <h3 class="city-select-heading">
+                    <span class="lang-en">Monthly income</span>
+                    <span class="lang-ur">ماہانہ آمدنی</span>
+                </h3>
+                <div class="single-field-input-wrapper">
+                    <input type="text" class="single-field-input" id="monthlyIncome" placeholder="" autocomplete="off"
+                        aria-label="Monthly income">
+                </div>
+            </section>
+
+
+            <!-- Funds Provider Name -->
+            <section class="form-section city-select-section">
+                <h3 class="city-select-heading">
+                    <span class="lang-en">Funds Provider Name</span>
+                    <span class="lang-ur">فنڈز فراہم کرنے والے کا نام</span>
+                </h3>
+                <div class="single-field-input-wrapper" style="margin-top: 3rem;">
+                    <input type="text" class="single-field-input" id="fundsProviderName" placeholder=""
+                        autocomplete="off" aria-label="Funds provider name">
+                </div>
+            </section>
+            <!-- Date of Birth -->
+            <section class="form-section city-select-section">
+                <h3 class="city-select-heading">
+                    <span class="lang-en">Date of Birth</span>
+                    <span class="lang-ur">تاریخ پیدائش</span>
+                </h3>
+                <div class="date-of-birth-input-wrapper">
+                    <input type="date" class="date-of-birth-input" id="dateOfBirth" aria-label="Date of birth">
+                    <span class="date-of-birth-icon">
+                        <img src="assets/date.png" alt="" aria-hidden="true">
+                    </span>
+                </div>
+            </section>
+
+            <!-- Upload CNIC front and back -->
+            <section class="form-section city-select-section">
+                <h3 class="city-select-heading">
+                    <span class="lang-en">Upload CNIC front and back</span>
+                    <span class="lang-ur">شناختی کارڈ کا اگلا اور پچھلا حصہ اپ لوڈ کریں</span>
+                </h3>
+                <div class="cnic-upload-row" style="margin-top: 2rem;">
+                    <div class="cnic-upload-item">
+                        <input type="file" id="cnicFront" name="cnicFront" accept="image/*" class="cnic-upload-input"
+                            aria-label="Upload CNIC front">
+                        <label for="cnicFront" class="cnic-upload-circle">
+                            <span class="cnic-upload-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                            </span>
+                            <span class="cnic-upload-label">CNIC Front</span>
+                        </label>
+                    </div>
+                    <div class="cnic-upload-item">
+                        <input type="file" id="cnicBack" name="cnicBack" accept="image/*" class="cnic-upload-input"
+                            aria-label="Upload CNIC back">
+                        <label for="cnicBack" class="cnic-upload-circle">
+                            <span class="cnic-upload-icon" aria-hidden="true">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                    <polyline points="17 8 12 3 7 8" />
+                                    <line x1="12" y1="3" x2="12" y2="15" />
+                                </svg>
+                            </span>
+                            <span class="cnic-upload-label">CNIC Back</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+                
+                    
+
+
+
+
+
+
+
+            <div class="pfCam-wrapper">
+
+                <div class="pfCam-container">
+            
+                    <!-- LEFT -->
+                    <div class="pfCam-left">
+                        <fieldset class="pfCam-box">
+                            <legend>Your Photo must be:</legend>
+            
+                            <ul class="pfCam-list">
+                                <li>Clear sharp, and focus</li>
+                                <li>Taken with a neutral facial expression</li>
+                                <li>Eyes Open and Clearly Visible</li>
+                                <li>Mouth closed, neutral expression</li>
+                                <li>In Case of minor account request, live photo of minor will be required.</li>
+                                <li>Place Your face in the frame and look towards the camera.</li>
+                            </ul>
+                            <a href="#" class="round-btn">Open Camera</a>
+                        </fieldset>
+                    </div>
+            
+                    <!-- RIGHT -->
+                    <div class="pfCam-right">
+                        <div class="pfCam-frame">
+            
+                            <!-- OUTER -->
+                            <div class="pfCam-frameOuter">
+                                <span class="pfCam-tl"></span>
+                                <span class="pfCam-tr"></span>
+                                <span class="pfCam-bl"></span>
+                                <span class="pfCam-br"></span>
+                            </div>
+            
+                            <!-- INNER -->
+                            <div class="pfCam-frameInner">
+                                <span class="pfCam-tl"></span>
+                                <span class="pfCam-tr"></span>
+                                <span class="pfCam-bl"></span>
+                                <span class="pfCam-br"></span>
+                            </div>
+            
+                            <!-- BUTTON -->
+                            <a href="#" class="pfCam-centerBtn">Capture</a>
+            
+                        </div>
+                    </div>
+            
+                </div>
+            
+            </div>
+
+
+
+
+
+
+
+
+
+            <!-- Acknowledgment -->
+            <section class="acknowledgment-section">
+                <h3 class="section-title acknowledgment-heading">
+                    <span class="lang-en">Acknowledgment</span>
+                    <span class="lang-ur">تصدیق</span>
+                </h3>
+                <div class="acknowledgment-text">
+                    <p>I hereby declare that I am a resident Pakistani and the information provided by me regarding my
+                        source of income / funds in this application is true. I further confirm that I myself shall be
+                        the
+                        beneficial owner of the requested account having controlling rights over the funds, the funds in
+                        this account shall be my own and that the funds beneficially owned by other persons will not be
+                        placed in (or routed through) this account.</p>
+                    <p>I further confirm and undertake that my source of income/funds is and shall always remain
+                        legitimate,
+                        true and correct in compliance of the applicable laws, rules and regulations (the "Applicable
+                        laws")
+                        and that I shall inform / declare the bank in writing in case of any change in source of income
+                        /
+                        funds forthwith to update the Bank's record.</p>
+                    <p>I further agreed and undertake to indemnify the bank against any and all loss, damages, penalties
+                        etc. arising out of, or in consequences of misinformation, misrepresentation or non-abiding of
+                        terms
+                        & conditions of Digital Account Opening & subsequent undertaking thereof or violation of any
+                        covenant hereof and that the bank is authorized to take necessary actions as per the Applicable
+                        Laws
+                        in case of such event.</p>
+                    <p>I/We do hereby authorise BankIslami Ltd. to share my/our account information, including account
+                        number and title with the Bank's approved printer for Cheque Book printing.</p>
+                    <p>By my/our consent above, I/we agree the BankIslami may activate all the banking services
+                        available
+                        through electronic fund transfers by using any payment instruments, channels or modes to execute
+                        all
+                        Debit/Credit transactions for my/our accounts in electronic form.</p>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="acknowledgeCheck" class="checkbox-input">
+                    <label for="acknowledgeCheck" class="checkbox-label">
+                        I acknowledge the product feature, key fact statement and accept the terms and conditions.
+                    </label>
+                </div>
+            </section>
+
+            <!-- Next with arrow -->
+            <section class="form-section next-section">
+                <div class="section-actions section-actions-next">
+                    <button type="button" class="btn-next" id="nextBtn">
+                        <span class="btn-next-text">Next</span>
+                        <span class="btn-next-icon">
+                            <img src="assets/arrow-right.png" alt="" aria-hidden="true">
+                        </span>
+                    </button>
+                </div>
+            </section>
+    </main>
+
+    <!-- Camera Modal -->
+    <section class="form-section pfCam-wrapper" style="margin-top: 8rem; padding: 0; background: transparent; border: none; position: relative; width: 100%; max-width: 900px; margin-left: auto; margin-right: auto;">
+        
+    <div style="position: absolute; top: -106px; left: 50%; transform: translateX(-50%); width: 212px; height: 212px; border-radius: 50%; background: linear-gradient(233.97deg, #3ED1A6 -5%, #722CD6 136.01%); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 25px; z-index: 10; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        <div style="width: 55px; height: 55px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,0.8); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; background: transparent;">
+            <img src="assets/icon2.png" alt="Camera" style="width: 26px; filter: brightness(0) invert(1);">
+        </div>
+        <h3 style="font-size: 1.25rem; color: white; font-weight: 600; margin: 0 0 5px 0; line-height: 1;">Live Picture Upload</h3>
+        <h4 class="lang-ur" style="color: white; font-size: 1.25rem; margin: 0; font-family: 'Noto Nastaliq Urdu', sans-serif; line-height: 1.2;">لائیو تصویر اپلوڈ کریں</h4>
+    </div>
+
+    <div style="border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; background: #0D2E61; padding: 130px 2rem 3rem 2rem; position: relative; z-index: 1;">
+        
+        <div class="pfCam-container" style="display: flex; gap: 2rem; align-items: stretch; flex-wrap: wrap;">
+            
+            <div class="pfCam-left" style="flex: 1; min-width: 300px; border: 1.5px dashed rgba(62, 209, 166, 0.5); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column;">
+                <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600;">Your Photo must be:</h4>
+                <ul class="pfCam-list" style="list-style: none; padding: 0; margin: 0 0 2rem 0; flex-grow: 1;">
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> Clear sharp, and focus</li>
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> Taken with a neutral facial expression</li>
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> Eyes Open and Clearly Visible</li>
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> Mouth closed, neutral expression</li>
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> In Case of minor account request, live photo of minor will be required.</li>
+                    <li style="color: #3ED1A6; margin-bottom: 0.8rem; font-size: 0.95rem; display: flex; gap: 10px;"><span>✔</span> Place Your face in the frame and look towards the camera. Your photo will be captured automatically.</li>
+                </ul>
+                <button id="openCameraBtn" style="background: transparent; border: 1.5px solid white; color: white; padding: 12px 35px; border-radius: 30px; cursor: pointer; align-self: flex-start; margin-top: auto; font-weight: 500;">Open Camera</button>
+            </div>
+
+            <div class="pfCam-right" style="flex: 1; min-width: 300px; border: 1px solid rgba(62, 209, 166, 0.3); border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                
+                <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%;">
+                    <div class="pfCam-frame" style="position: relative; width: 220px; height: 260px; display: flex; align-items: center; justify-content: center;">
+                        <div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-top: 2px solid #3ED1A6; border-left: 2px solid #3ED1A6;"></div>
+                        <div style="position: absolute; top: 0; right: 0; width: 40px; height: 40px; border-top: 2px solid #3ED1A6; border-right: 2px solid #3ED1A6;"></div>
+                        <div style="position: absolute; bottom: 0; left: 0; width: 40px; height: 40px; border-bottom: 2px solid #3ED1A6; border-left: 2px solid #3ED1A6;"></div>
+                        <div style="position: absolute; bottom: 0; right: 0; width: 40px; height: 40px; border-bottom: 2px solid #3ED1A6; border-right: 2px solid #3ED1A6;"></div>
+                        
+                        <video id="liveVideo" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: none;"></video>
+                        <canvas id="liveCanvas" style="display: none;"></canvas>
+                        <img id="livePhotoPreviewImg" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px; display: none;" />
+                    </div>
+                </div>
+                
+                <button id="capturePhotoBtn" style="background: #8BC34A; border: none; color: white; padding: 12px 60px; border-radius: 30px; cursor: pointer; margin-top: auto; font-weight: 600; font-size: 1.1rem; align-self: center;">Capture</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="js/bank-script.js"></script>
+</body>
+
+</html>

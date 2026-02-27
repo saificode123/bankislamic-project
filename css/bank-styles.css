@@ -2945,7 +2945,7 @@ body{
 
 .pfCam-badge-title-ur {
     font-family: 'Noto Nastaliq Urdu', sans-serif;
-    font-size: 20px;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
     font-weight: normal;
     line-height: 100%;
     color: #FFFFFF;

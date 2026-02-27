@@ -793,7 +793,7 @@ a.logo:focus-visible {
 
 .city-select-heading .lang-en {
     display: block;
-    font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+    font-size: clamp(0.95rem, 1.8vw, 1.5rem);
     font-weight: 600;
     color: #ffffff;
     font-family: 'Inter', Arial, sans-serif;
@@ -802,7 +802,7 @@ a.logo:focus-visible {
 
 .city-select-heading .lang-ur {
     display: block;
-    font-size: clamp(0.9rem, 1.6vw, 1rem);
+    font-size: clamp(0.9rem, 1.6vw, 1.5rem);
     font-weight: 400;
     color: rgba(255, 255, 255, 0.85);
     font-family: 'Noto Sans Arabic', Arial, sans-serif;
@@ -2513,11 +2513,11 @@ a.logo:focus-visible {
     }
 
     .hero-banner .hero-title .lang-en {
-        font-size: clamp(1.1rem, 4vw, 1.4rem);
+        font-size: clamp(1.1rem, 4vw, 1.5rem);
     }
 
     .hero-banner .hero-title .lang-ur {
-        font-size: clamp(1.05rem, 3.5vw, 1.35rem);
+        font-size: clamp(1.05rem, 3.5vw, 1.5rem);
     }
 
     .hero-icon-circle {
@@ -2790,12 +2790,12 @@ a.logo:focus-visible {
     }
 
     .hero-banner .hero-title .lang-en {
-        font-size: clamp(1rem, 3.5vw, 1.25rem);
+        font-size: clamp(1rem, 3.5vw, 1.5rem);
         padding: 0px 0px 0px 7px;
     }
 
     .hero-banner .hero-title .lang-ur {
-        font-size: clamp(1rem, 3vw, 1.2rem);
+        font-size: clamp(1rem, 3vw, 1.5rem);
     }
 
     .hero-icon-circle {
